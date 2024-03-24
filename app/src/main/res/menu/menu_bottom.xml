@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/list2d"
+        android:title="2D Shapes"/>
+
+    <item
+        android:id="@+id/list3d"
+        android:title="3D Shapes"/>
+
+
+    <item
+        android:id="@+id/listProfile"
+        android:title="Profiles"
+        android:icon="@drawable/baseline_person_24"/>
+
+</menu>
