@@ -2,11 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/list2d"
-        android:title="2D Shapes"/>
+        android:title="2D Shapes"
+        android:icon="@drawable/shapes"/>
 
     <item
         android:id="@+id/list3d"
-        android:title="3D Shapes"/>
+        android:title="3D Shapes"
+        android:icon="@drawable/cube"/>
 
 
     <item

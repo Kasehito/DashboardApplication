@@ -23,16 +23,18 @@ public class Menu2dFragment extends Fragment {
     List<Items> items;
 
     @Override
-    public View onCreateView(LayoutInflater layoutInflater,ViewGroup container, Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        View view = layoutInflater.inflate(R.layout.fragment_menu2d, container);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_menu2d, container, false);
+
         items = new ArrayList<>();
-        items.add(new Items("dadw","https://img.freepik.com/premium-vector/school-background-with-doodles-vector-illustration-hand-drawn-style-rulers-triangles-school-supplies-vector-illustration_647193-3275.jpg"));
+        items.add(new Items("dadw", "https://img.freepik.com/premium-vector/school-background-with-doodles-vector-illustration-hand-drawn-style-rulers-triangles-school-supplies-vector-illustration_647193-3275.jpg"));
+
         recyclerView = view.findViewById(R.id.rv2dMenu);
-        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));  // 2 untuk 2 kolom
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         adapter = new MyAdapter(getActivity(), items);
         recyclerView.setAdapter(adapter);
 
         return view;
     }
 }
+

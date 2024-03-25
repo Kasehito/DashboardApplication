@@ -22,15 +22,15 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.etPassword);
         loginButton = findViewById(R.id.btnLogin);
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (username.getText().toString().equals("user") && password.getText().toString().equals("1234")) {
-                    Intent intent = new Intent(MainActivity.this, Dashboard.class);
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(MainActivity.this,"Wrong Password/Username, please try again", Toast.LENGTH_SHORT).show();
-                }
+        loginButton.setOnClickListener(v -> {
+            if (username.getText().toString().equals("user") && password.getText().toString().equals("1234")) {
+                Intent intent = new Intent(MainActivity.this, Dashboard.class);
+                startActivity(intent);
+            } else if (username.getText().toString().isEmpty() || password.getText().toString().isEmpty()){
+                Toast.makeText(MainActivity.this,"Password/Username still empty", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(MainActivity.this,"Wrong Password/Username, please try again", Toast.LENGTH_SHORT).show();
+
             }
         });
     }
