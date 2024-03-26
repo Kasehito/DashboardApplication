@@ -37,7 +37,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/poppins_bold"
             android:text="Login"
-            android:textColor="@color/black"
+            android:textColor="primary"
             android:textSize="40sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"

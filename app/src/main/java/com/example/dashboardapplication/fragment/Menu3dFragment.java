@@ -23,12 +23,12 @@ public class Menu3dFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_menu2d, container, false);
+        View view = inflater.inflate(R.layout.fragment_menu3d, container, false);
 
         items = new ArrayList<>();
         items.add(new Items("dadw", "https://img.freepik.com/premium-vector/school-background-with-doodles-vector-illustration-hand-drawn-style-rulers-triangles-school-supplies-vector-illustration_647193-3275.jpg"));
 
-        recyclerView = view.findViewById(R.id.rv2dMenu);
+        recyclerView = view.findViewById(R.id.rv3dMenu);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         adapter = new MyAdapter(getActivity(), items);
         recyclerView.setAdapter(adapter);

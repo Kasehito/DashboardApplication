@@ -1,11 +1,9 @@
 package com.example.dashboardapplication;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,7 +16,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
     private Context context;
     private List<Items> items;
-    ItemClickListener mClickListener;
+    private ItemClickListener mClickListener;
 
     public void filterList(List<Items> dataSearchList){
         this.items = dataSearchList;
@@ -33,7 +31,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.items_layout,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.layout_items, parent, false);
         return new MyViewHolder(view);
     }
 
@@ -50,18 +48,19 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mClickListener != null) {
-                    mClickListener.onItemClick(v, position);
+                int clickedPosition = holder.getAdapterPosition();
+                if (mClickListener != null && clickedPosition != RecyclerView.NO_POSITION) {
+                    mClickListener.onItemClick(v, clickedPosition);
                 }
             }
         });
-
     }
 
     @Override
     public int getItemCount() {
         return items.size();
     }
+
     String getItem(int id) {
         return items.get(id).getName();
     }
@@ -72,6 +71,5 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
     public interface ItemClickListener {
         void onItemClick(View view, int position);
-
     }
 }
