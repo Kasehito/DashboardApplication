@@ -18,11 +18,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     private List<Items> items;
     private ItemClickListener mClickListener;
 
-    public void filterList(List<Items> dataSearchList){
-        this.items = dataSearchList;
-        notifyDataSetChanged();
-    }
-
     public MyAdapter(Context context, List<Items> items) {
         this.context = context;
         this.items = items;
@@ -38,12 +33,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.nameView.setText(items.get(position).getName());
-
-        Glide.with(holder.imageView.getContext())
-                .load(items.get(position).getImage())
-                .placeholder(R.drawable.baseline_person_24)
-                .error(R.drawable.baseline_question_mark_24)
-                .into(holder.imageView);
+        holder.imageView.setImageResource(items.get(position).getImage());
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +55,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
         return items.get(id).getName();
     }
 
-    void setClickListener(ItemClickListener itemClickListener) {
+    public void setClickListener(ItemClickListener itemClickListener) {
         this.mClickListener = itemClickListener;
     }
 

@@ -23,9 +23,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu_bottom"
-        android:background="@color/white"
-        app:itemTextColor="@color/black"
-        app:itemIconTint="@color/black"
+        android:background="?attr/colorPrimary"
+        app:itemTextColor="?attr/colorSecondary"
+        app:itemIconTint="?attr/colorSecondary"
         app:compatShadowEnabled="true"
         />
 
