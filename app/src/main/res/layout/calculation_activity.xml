@@ -40,17 +40,19 @@
             android:fontFamily="@font/poppins_medium"
             android:text="Circle"
             android:textColor="@color/black"
-            android:textSize="35dp" />
+            android:textSize="35dp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
 
 
         <ImageView
             android:id="@+id/shape"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginBottom="20dp"
             android:src="@drawable/ball"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:layout_gravity="center"
+            />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -70,66 +72,70 @@
                     android:id="@+id/input_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@android:color/transparent"
+                    android:background="@drawable/bg_edit_text"
                     android:fontFamily="@font/poppins"
                     android:hint="Input 1"
                     android:inputType="numberSigned|numberDecimal"
                     android:textColor="@color/black"
                     android:textColorHint="#666666"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:padding="15dp"
+                    android:layout_marginBottom="15dp"
+                    />
 
                 <EditText
                     android:id="@+id/input_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@android:color/transparent"
+                    android:background="@drawable/bg_edit_text"
                     android:fontFamily="@font/poppins"
                     android:hint="Input 2"
                     android:inputType="numberSigned|numberDecimal"
                     android:textColor="@color/black"
                     android:textColorHint="#666666"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:padding="15dp"
+                    android:layout_marginBottom="15dp"/>
 
                 <EditText
                     android:id="@+id/input_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@android:color/transparent"
+                    android:background="@drawable/bg_edit_text"
                     android:fontFamily="@font/poppins"
                     android:hint="Input 3"
                     android:inputType="numberSigned|numberDecimal"
                     android:textColor="@color/black"
                     android:textColorHint="#666666"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:padding="15dp"
+                    android:layout_marginBottom="15dp"/>
 
                 <Button
                     android:id="@+id/btnSubmit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/black"
-                    android:fontFamily="@font/poppins_medium"
-                    android:padding="12dp"
+                    android:background="@drawable/bg_black"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="15dp"
                     android:text="Calculate"
                     android:textColor="@android:color/white"
-                    android:textFontWeight="500"
                     android:textSize="16sp"
-                    app:cornerRadius="12dp" />
+                    />
 
                 <TextView
                     android:id="@+id/result"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_bold"
+                    android:fontFamily="@font/poppins_medium"
                     android:text="Hasil"
+                    android:layout_marginTop="10dp"
                     android:textColor="@color/black"
-                    android:textFontWeight="700"
                     android:textSize="20sp" />
 
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
     </LinearLayout>
 

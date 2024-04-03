@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Dashboard">
+    tools:context=".Dashboard"
+    >
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -13,7 +14,8 @@
         app:layout_constraintBottom_toTopOf="@+id/bottomNav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+       />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
@@ -23,9 +25,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu_bottom"
-        android:background="?attr/colorPrimary"
-        app:itemTextColor="?attr/colorSecondary"
-        app:itemIconTint="?attr/colorSecondary"
+        android:background="?attr/colorSecondary"
+        app:itemTextColor="?attr/colorPrimary"
+        app:itemIconTint="?attr/colorPrimary"
         app:compatShadowEnabled="true"
         />
 
