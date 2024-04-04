@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="Login"
+            android:text="Login to your account"
             android:textColor="?attr/colorPrimary"
             android:textSize="40sp"
             android:textStyle="bold" />
